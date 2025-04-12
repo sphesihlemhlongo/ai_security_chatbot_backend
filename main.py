@@ -31,6 +31,10 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 class UserPrompt(BaseModel):
     prompt: str
 
+@app.get("/")
+def home():
+    return {"message": "CipherGenix backend is live"}
+
 @app.post("/chat/")
 def chat_with_ciphergenix(user_prompt: UserPrompt):
     """ Generates prompt and gets response from Gemini
