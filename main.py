@@ -6,6 +6,7 @@ import json
 from datetime import datetime
 from google import genai
 from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
 
 
 # Load environment variables
@@ -110,3 +111,9 @@ def get_chat_history():
     except FileNotFoundError:
         return {"history": []}
     return {"history": history}
+
+
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
