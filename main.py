@@ -13,7 +13,7 @@ import uvicorn
 load_dotenv()
 
 # Initialize the app
-app = FastAPI(openapi_url=None, docs_url=None)
+app = FastAPI(openapi_url="/openapi.json", docs_url="/docs")
 
 
 app.add_middleware(
