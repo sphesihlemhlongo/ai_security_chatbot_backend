@@ -88,8 +88,8 @@ Remember: Your goal is to help users improve their security posture through educ
             "ciphergenix_response": ai_reply
         }
 
-        with open("chat_logs/history.jsonl", "a") as log_file:
-            log_file.write(json.dumps(chat_entry) + "\n")
+        # with open("chat_logs/history.jsonl", "a") as log_file:
+        #     log_file.write(json.dumps(chat_entry) + "\n")
 
         return {
             "ciphergenix_response": ai_reply
