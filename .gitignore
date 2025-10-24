@@ -2,3 +2,6 @@
 __pycache__/
 *.py[cod]
 .
+.vercel
+chat_history.json
+chat_logs/
